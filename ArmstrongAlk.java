@@ -1,12 +1,18 @@
 package gr.aueb.cf.ch10;
 
+import java.util.Scanner;
+
 public class ArmstrongAlk {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         int num = 9474;
         int sum = 0;
         int numberOfDigits;
         String subStr;
         int tempDigit;
+
+        System.out.println("Please enter a number (integer)");
+        num = scanner.nextInt();
 
 
         String numberStr = Integer.toString(num);
