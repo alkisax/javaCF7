@@ -1,4 +1,4 @@
-package gr.aueb.cf.ch13.exercises;
+package gr.aueb.cf.ch13.exercises.pointXYZ;
 
 import java.util.Random;
 
