@@ -1,17 +1,27 @@
-package gr.aueb.cf.ch13.exercises.bankapp;
-import gr.aueb.cf.ch13.exercises.AccountHW;
+package gr.aueb.cf.ch13.exercises.bankapp.model;
 
-public class OverfraftAccount extends AccountHW{
+import gr.aueb.cf.ch13.exercises.bankapp.AccountHW;
 
+/**
+ * Defines an {@link OverfraftAccount} class which extends AccountHW.
+ * This class allows overdraft withdrawals beyond account balance.
+ */
+public class OverfraftAccount extends AccountHW {
 
     public OverfraftAccount() {
     }
 
     public OverfraftAccount(int id, String iban, String firstname, String lastname, String ssn, Double balance) {
         super(id, iban, firstname, lastname, ssn, balance);
-
     }
 
+    /**
+     * Withdraws a certain amount of money from the OverfraftAccount.
+     * Allows overdrafts even if balance goes below zero.
+     * @param amount    the amount of money to be withdrawn.
+     * @param ssn       the SSN to validate withdrawal.
+     * @throws Exception if the withdrawal conditions are not met.
+     */
     @Override
     public void withdraw (double amount, String ssn) throws Exception{
         try {

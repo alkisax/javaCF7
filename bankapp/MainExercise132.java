@@ -1,8 +1,8 @@
-package gr.aueb.cf.ch13.exercises;
+package gr.aueb.cf.ch13.exercises.bankapp;
 
 import gr.aueb.cf.ch13.Account;
-import gr.aueb.cf.ch13.exercises.bankapp.JointAccount;
-import gr.aueb.cf.ch13.exercises.bankapp.OverfraftAccount;
+import gr.aueb.cf.ch13.exercises.bankapp.model.JointAccount;
+import gr.aueb.cf.ch13.exercises.bankapp.model.OverfraftAccount;
 
 public class MainExercise132 {
     public static void main(String[] args) {

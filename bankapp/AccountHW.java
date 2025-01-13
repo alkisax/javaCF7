@@ -1,8 +1,7 @@
-package gr.aueb.cf.ch13.exercises;
-
+package gr.aueb.cf.ch13.exercises.bankapp;
 
 /**
- * defines a {@link AccountHW} class.
+ * Defines an {@link AccountHW} class for a simple bank account.
  */
 public class AccountHW {
     private int id;
@@ -61,12 +60,10 @@ public class AccountHW {
         this.getBalance = getBalance;
     }
 
-    /*
-     *  public API
-     */
+    /* Public API */
 
     /**
-     * Deposits a certain amount of money.
+     * Deposits a certain amount of money into the account.
      * @param amount    the amount of money to be deposited.
      * @throws Exception if the amount is negative.
      */
@@ -78,19 +75,25 @@ public class AccountHW {
             getBalance += amount;
             System.out.println("Amount " + amount + " successfully deposited");
         } catch (Exception e) {
-            System.err.println("Error. Amount" + amount + " can not be negative");
+            System.err.println("Error. Amount " + amount + " cannot be negative");
             e.printStackTrace();
             throw e;
         }
     }
 
+    /**
+     * Withdraws a certain amount of money from the account.
+     * @param amount    the amount of money to be withdrawn.
+     * @param ssn       the SSN to validate withdrawal.
+     * @throws Exception if the withdrawal conditions are not met.
+     */
     public void withdraw (double amount, String ssn) throws Exception{
         try {
             if (!isSsnValid(ssn)) {
                 throw new Exception("SSN " + ssn + " is not valid");
             }
             if (amount > getBalance) {
-                throw new Exception("Insufficient balance " + getBalance +  " for amount " + amount);
+                throw new Exception("Insufficient balance " + getBalance + " for amount " + amount);
             }
             if (amount < 0) {
                 throw new Exception("The amount must not be negative");
@@ -109,8 +112,8 @@ public class AccountHW {
     }
 
     /**
-     * reutrns the balance of the account
-     * @return teh Accounts balance.
+     * Returns the balance of the account.
+     * @return the account's balance.
      */
     public double getAccountBalance() {
         System.out.println("The account balance was returned");
@@ -118,7 +121,8 @@ public class AccountHW {
     }
 
     /**
-     *
+     * Returns the account's details in string format.
+     * @return the account information.
      */
     public String accountToString () {
         return  "(" + ", " + id + ", " + iban + ", " + firstname + ", " + lastname + ", " + ssn + ", " + getBalance +")";

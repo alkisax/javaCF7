@@ -1,7 +1,11 @@
-package gr.aueb.cf.ch13.exercises.bankapp;
+package gr.aueb.cf.ch13.exercises.bankapp.model;
 
-import gr.aueb.cf.ch13.exercises.AccountHW;
+import gr.aueb.cf.ch13.exercises.bankapp.AccountHW;
 
+/**
+ * Defines a {@link JointAccount} class which extends AccountHW.
+ * This class allows multiple account holders to share an account.
+ */
 public class JointAccount extends AccountHW {
     private String firstname2nd;
     private String lastname2nd;

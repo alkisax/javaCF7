@@ -1,0 +1,41 @@
++-----------------------------------------+
+|      AccountHW                          |
++-----------------------------------------+
+| - id: int                               |
+| - iban: String                          |
+| - firstname: String                     |
+| - lastname: String                      |
+| - ssn: String                           |
+| - getBalance: double                    |
++-----------------------------------------+
+| + getBalance(): double                  |
+| + setBalance(amount: double)            |
+| + withdraw(amount: double, ssn: String) |
+| + deposit(amount: double)               |
+| + getAccountBalance(): double           |
+| + accountToString(): String             |
++-----------------------------------------+
+           |
+           | Inherits
+           v
++-----------------------------------------+
+|     OverfraftAccount                    |
++-----------------------------------------+
+|                                         |
++-----------------------------------------+
+| + withdraw(amount: double, ssn: String) |
++-----------------------------------------+
+           |
+           | Inherits
+           v
++-----------------------------------------+
+|      JointAccount                       |
++-----------------------------------------+
+| - firstname2nd: String                  |
+| - lastname2nd: String                   |
++-----------------------------------------+
+| + getFirstname2nd(): String             |
+| + setFirstname2nd(firstname: String)    |
+| + getLastname2nd(): String              |
+| + setLastname2nd(lastname: String)      |
++-----------------------------------------+
