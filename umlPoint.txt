@@ -1,0 +1,21 @@
++----------------------------------------+
+|               PointXYZ                 |
++----------------------------------------+
+| - x : int                              |
+| - y : int                              |
+| - z : int                              |
++----------------------------------------+
+| + PointXYZ()                           |
+| + PointXYZ(x:int, y:int, z:int)        |
+| + getX() : int                         |
+| + setX(x:int)                          |
+| + getY() : int                         |
+| + setY(y:int)                          |
+| + getZ() : int                         |
+| + setZ(z:int)                          |
+| + getXYDistance() : int                |
+| + getYZDistance() : int                |
+| + getXZDistance() : int                |
+| + getXyZDistance() : int               |
+| + convertToString() : String           |
++----------------------------------------+
