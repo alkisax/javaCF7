@@ -1,5 +1,0 @@
-Location,Latitude,Longitude
-Athens,37.9838,237275
-Thessaloniki,40.6401,229444
-Patras,38.2666,21.7346
-Heraklion,35.3387,25.1442
